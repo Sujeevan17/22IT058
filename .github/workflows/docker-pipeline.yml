@@ -1,0 +1,17 @@
+name: docker-pipeline-sujeevan
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print your name
+        run: echo "Hello world - 22IT058"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Docker Build
+        run: docker build -t Sujeevan/ml-model-22it058 .
+
+      - name: Docker Images
+        run: docker images
